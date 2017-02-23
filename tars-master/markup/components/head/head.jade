@@ -4,7 +4,8 @@ mixin head(data)
     title #{data.title}
     meta(content="", name="description")
     meta(content="", name="keywords")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    script var screenWidth = screen.width; var metaContentWidth; if (screen.width < 768) {  metaContentWidth = 'device-width, initial-scale=1'; } else {  metaContentWidth = 1220; } document.write('<meta name="viewport" content="width=' + metaContentWidth + '">');
+
     meta(content="telephone=no", name="format-detection")
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
     meta(name="HandheldFriendly", content="true")
