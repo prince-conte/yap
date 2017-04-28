@@ -1,8 +1,13 @@
 @import '../normalize.scss';
 
+//config
+$enable-mq-device: false;
 
-@import '../libraries/bourbon/_bourbon.scss';
-@import '../libraries/neat/_neat.scss';
+// functions
+// Half
+@function half($value) {
+  @return $value / 2;
+}
 
 @import '../vars.scss';
 @import '../mixins.scss';

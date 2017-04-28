@@ -13,7 +13,7 @@ html {
 body {
   position: relative; // 1
   min-height: 100%;   // 1
-  background: #ebedee;
+  background: #fff;
   font-size: 62.5%;
   color: $color-base;
   font-family: $font-family-base-book;
@@ -21,8 +21,8 @@ body {
 
 // Links
 a {
-  @include transition(all $transition-duration-base);
   @include hover(color, $color-base);
+  transition: $transition-duration-base;
   color: $color-brand;
   text-decoration: none;
   outline: none;
@@ -50,36 +50,6 @@ fieldset {
 // Figure
 figure {
   margin: 0;
-}
-
-// Headings
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: normal;
-}
-
-h1 {
-  @include h1;
-}
-
-h2 {
-  @include h2;
-}
-
-h3 {
-  @include h3;
-}
-
-h4 {
-  @include h4;
-}
-
-h5 {
-  @include h5;
-}
-
-h6 {
-  @include h6;
 }
 
 // Images

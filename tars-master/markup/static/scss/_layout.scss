@@ -1,29 +1,51 @@
+// mq indents
 
+//.mq-container-indents {
+//  padding-right:  nth($mq-container-indents, 1);
+//  padding-left: nth($mq-container-indents, 1);
+//  
+//  @include mq(sm) {
+//    padding-right:  nth($mq-container-indents, 2);
+//    padding-left: nth($mq-container-indents, 2);
+//  }
+//
+//  @include mq(md) {
+//    padding-right:  nth($mq-container-indents, 3);
+//    padding-left: nth($mq-container-indents, 3);
+//  }
+//}
 
-body {
-  @include media($breakpoint-desktop) {
-    min-width: 118rem + $indent-base-desktop * 2;
-  }
-}
+//.mq-container-width {
+//  padding-right: 1rem;
+//  padding-left: 1rem;
+//  
+//  @include mq(sm) {
+//    padding-right: 1.5rem;
+//    padding-left: 1.5rem;
+//  }
+//
+//  @include mq(md) {
+//    padding-right: 3rem;
+//    padding-left: 3rem;
+//  }
+//}
 
 // Container
-.container {
-  @include fill-parent();
-  @include outer-container($container-width-mobile);
-  padding: {
-    right: $indent-base-mobile;
-    left: $indent-base-mobile;
-  }
 
-  @include media($breakpoint-desktop) {
-    @include outer-container($container-width-desktop + $indent-base-desktop * 2);
-    padding: {
-      right: $indent-base-desktop;
-      left: $indent-base-desktop;
-    }
+
+
+.container {
+  @include container();
+}
+
+.grid {
+  @include grid();
+  
+  &__item {
+    @include grid-cols(1, 4);
+    @include grid-col;
+    min-height: 20rem
   }
-    
-    min-height: 500px
 }
 
 

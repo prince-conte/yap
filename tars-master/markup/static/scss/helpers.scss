@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-// Responsive
-.is-mobile {
-  @include media($breakpoint-desktop) {
-    display: none !important;
-  }
-}
-
-.is-desktop {
-  @include media($breakpoint-mobile) {
-    display: none !important;
-  }
-}
 
 // Hidden
 .is-hidden {
